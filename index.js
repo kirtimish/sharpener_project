@@ -5,5 +5,9 @@ var dateInput = document.getElementById('date');
 var timeInput = document.getElementById('time');
 
 addEventListener('submit', function() {
-        alert( nameInput.value + ", " + emailInput.value + ", " + phnInput.value + ", " + dateInput.value + ", " + timeInput.value)
+        this.localStorage.setItem('name', nameInput.value);
+        this.localStorage.setItem('email',emailInput.value);
+        this.localStorage.setItem('phn_no',phnInput.value);
+        this.localStorage.setItem('date',dateInput.value);
+        this.localStorage.setItem('time',timeInput.value);
  });
