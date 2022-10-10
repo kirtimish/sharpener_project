@@ -5,9 +5,15 @@ var dateInput = document.getElementById('date');
 var timeInput = document.getElementById('time');
 
 addEventListener('submit', function() {
-        this.localStorage.setItem('name', nameInput.value);
-        this.localStorage.setItem('email',emailInput.value);
-        this.localStorage.setItem('phn_no',phnInput.value);
-        this.localStorage.setItem('date',dateInput.value);
-        this.localStorage.setItem('time',timeInput.value);
+let user = {
+        name: nameInput.value,
+        email: emailInput.value,
+        phn: phnInput.value,
+        date: dateInput.value,
+        time: timeInput.value
+}
+
+let user_info = JSON.stringify(user);
+
+        this.localStorage.setItem("User", user_info);
  });
